@@ -1,0 +1,11 @@
+C:\Users\anju.mathew\IEnumerableDemo2\bin\Debug\netcoreapp2.2\IEnumerableDemo2.deps.json
+C:\Users\anju.mathew\IEnumerableDemo2\bin\Debug\netcoreapp2.2\IEnumerableDemo2.runtimeconfig.json
+C:\Users\anju.mathew\IEnumerableDemo2\bin\Debug\netcoreapp2.2\IEnumerableDemo2.runtimeconfig.dev.json
+C:\Users\anju.mathew\IEnumerableDemo2\bin\Debug\netcoreapp2.2\IEnumerableDemo2.dll
+C:\Users\anju.mathew\IEnumerableDemo2\bin\Debug\netcoreapp2.2\IEnumerableDemo2.pdb
+C:\Users\anju.mathew\IEnumerableDemo2\obj\Debug\netcoreapp2.2\IEnumerableDemo2.csprojAssemblyReference.cache
+C:\Users\anju.mathew\IEnumerableDemo2\obj\Debug\netcoreapp2.2\IEnumerableDemo2.csproj.CoreCompileInputs.cache
+C:\Users\anju.mathew\IEnumerableDemo2\obj\Debug\netcoreapp2.2\IEnumerableDemo2.AssemblyInfoInputs.cache
+C:\Users\anju.mathew\IEnumerableDemo2\obj\Debug\netcoreapp2.2\IEnumerableDemo2.AssemblyInfo.cs
+C:\Users\anju.mathew\IEnumerableDemo2\obj\Debug\netcoreapp2.2\IEnumerableDemo2.dll
+C:\Users\anju.mathew\IEnumerableDemo2\obj\Debug\netcoreapp2.2\IEnumerableDemo2.pdb
