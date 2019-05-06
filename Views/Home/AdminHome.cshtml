@@ -1,0 +1,46 @@
+
+@model IEnumerable<TerminologyDemo.Models.UserAccount>
+@{
+    ViewData["Title"] = "Welcome To is admin Page";
+}
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Registered Users</h2>
+        @if (Model.Any())
+        {
+            <table class="table">
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.firstName</td>
+                        <td>@item.LastName</td>
+                        <td>@item.UserName</td>
+                        <td>@item.EmailId</td>
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <p>There are no registered users.</p>
+
+        }
+    </div>
+    </div>
+</div>
+
