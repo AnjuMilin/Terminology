@@ -12,17 +12,10 @@ namespace TerminologyDemo.Models
       [Key]
 
       public int ProjectId { get; set; }
-      
+    
       [Required(ErrorMessage="Project Name  Required")]
       public string ProjectName { get; set; }
-      
-      
-
-
-      
-      
-
-    
+        
   }
 
 }

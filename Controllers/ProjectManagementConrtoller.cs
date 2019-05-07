@@ -35,6 +35,40 @@ namespace TerminologyDemo.Controllers
             return View(ProjectManagement);
         }
 
+        public IActionResult ProjectAdd()
+        {
+           
+            return View();
+        }
+
+        public IActionResult ProjectView()
+        {
+           
+            return View();
+        }
+
+
+        public IActionResult ProjectManagementHome()
+        {
+           ViewBag.UserName=HttpContext.Session.GetString("UserName");
+                return View();
+        
+        }
+
+        public IActionResult ProjectDelete()
+        {
+           
+            return View();
+        }
+
+
+
+        
+
+
+
+
+
 
 
 

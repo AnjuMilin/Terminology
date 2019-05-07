@@ -32,5 +32,5 @@ C:\Users\anju.mathew\TerminologyDemo\obj\Debug\netcoreapp2.2\Razor\Views\Home\Re
 C:\Users\anju.mathew\TerminologyDemo\obj\Debug\netcoreapp2.2\Razor\Views\Home\ResetPassword.g.cshtml.cs
 C:\Users\anju.mathew\TerminologyDemo\obj\Debug\netcoreapp2.2\Razor\Views\Home\Welcome.g.cshtml.cs
 C:\Users\anju.mathew\TerminologyDemo\obj\Debug\netcoreapp2.2\Razor\Views\Home\AdminHome.g.cshtml.cs
-C:\Users\anju.mathew\TerminologyDemo\obj\Debug\netcoreapp2.2\Razor\Views\ProjectManagementView\ProjectAddView.g.cshtml.cs
-C:\Users\anju.mathew\TerminologyDemo\obj\Debug\netcoreapp2.2\Razor\Views\ProjectManagementView\ProjectDeleteView.g.cshtml.cs
+C:\Users\anju.mathew\TerminologyDemo\obj\Debug\netcoreapp2.2\Razor\Views\ProjectManagement\ProjectAddView.g.cshtml.cs
+C:\Users\anju.mathew\TerminologyDemo\obj\Debug\netcoreapp2.2\Razor\Views\ProjectManagement\ProjectManagementHome.g.cshtml.cs

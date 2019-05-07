@@ -2769,8 +2769,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\ProjectManagementView\\ProjectDeleteView.cshtml",
-      "TargetPath": "Views\\ProjectManagementView\\ProjectDeleteView.cshtml",
+      "FilePath": "Views\\ProjectManagement\\ProjectManagementHome.cshtml",
+      "TargetPath": "Views\\ProjectManagement\\ProjectManagementHome.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -2819,8 +2819,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\ProjectManagementView\\ProjectAddView.cshtml",
-      "TargetPath": "Views\\ProjectManagementView\\ProjectAddView.cshtml",
+      "FilePath": "Views\\ProjectManagement\\ProjectAddView.cshtml",
+      "TargetPath": "Views\\ProjectManagement\\ProjectAddView.cshtml",
       "FileKind": "mvc"
     },
     {

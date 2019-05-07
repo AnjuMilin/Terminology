@@ -59,7 +59,10 @@ namespace TerminologyDemo.Controllers
             //var isValid = (user.UserName == "admin" && user.Password == "admin"); 
             if(user.UserName == "admin" && user.Password == "admin")
             {
-            return RedirectToAction("AdminHome");
+           // return RedirectToAction("AdminHome");
+           
+
+         return RedirectToAction("ProjectManagementHome", "ProjectManagement");
             }
         //}
           else
