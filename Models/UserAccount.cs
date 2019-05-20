@@ -37,7 +37,7 @@ namespace TerminologyDemo.Models
       public string ConformPassword { get; set; }
 
 
-
+     public bool IsActive { get ; set ;}
       
       
 

@@ -1,0 +1,41 @@
+@model IEnumerable<TerminologyDemo.Models.ProjectManagement>
+
+@{
+    ViewData["Title"] = "Delete Project";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    
+        
+
+        
+        
+    <form asp-action="ProjectDeleteById">
+       
+     <dl class="row">
+        <dt class = "col-sm-2">
+         @Html.DropDownList(
+                        "ProjectId", 
+                        new SelectList(
+                        Model.Select(x => new { Value = x.ProjectId, Text = x.ProjectName }),
+                         "Value",
+                          "Text"
+    )
+) 
+<!-- <input id="ProjectId" type="text" /> -->
+        </dt></dl>
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="ProjectManagementHome" onsubmit="message()">Back to List</a>
+    </form>
+</div>
+</html>
+<script>
+     function message()
+     {
+         alert("successfully deleted project");
+     }
+</script>

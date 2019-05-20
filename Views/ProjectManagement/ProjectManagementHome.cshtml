@@ -1,29 +1,91 @@
-@model TerminologyDemo.Models.UserAccount
-@{
-    ViewData["Title"] = " Admin Welcome";
-}
 
-<h2>Hello @ViewBag.Username</h2>
+@model IEnumerable<TerminologyDemo.Models.UserAccount>
+@{
+    ViewData["Title"] = "Welcome To admin Page";
+}
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Registered Users</h2>
+        @if (Model.Any())
+        {
+            <table class="table">
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>IsActive</th>
+                    <th>Deactivate</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.firstName</td>
+                        <td>@item.LastName</td>
+                        <td>@item.UserName</td>
+                        <td>@item.EmailId</td>
+                        <td>@item.IsActive</td>
+                        
+                          <td>
+                        <form asp-action="Deactivate" method="post" asp-controller="ProjectManagement" onsubmit="message" asp-route-id="@item.UserId">
+                            <button>Deactivate User</button>
+                        </form>
+                    </td>
+                    </tr>
+
+                    
+                }
+            </table>
+        }
+        else
+        {
+            <p>There are no registered users.</p>
+
+        }
+    </div>
+    
+         <script>
+             function message()
+             {
+                 alert{"Deactivated successfully"};
+             }
+         </script>
+           
+
 
  <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
+                       
+                      
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ProjectManagementController" asp-action="Logout">Logout</a>
-                            
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ProjectManagementController" asp-action="ProjectAdd">Add Project</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ProjectManagement" asp-action="ProjectAdd">Add Project</a>
                             
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ProjectManagementController" asp-action="ProjectView">View Project</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ProjectManagement" asp-action="ProjectView">View Project</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ProjectManagementController" asp-action="ProjectDelete">View Project</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ProjectManagement" asp-action="ProjectDelete">Delete Project</a>
                         </li>
+
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Logout">Logout</a>
+                            
+                        </li>
+
+
+
                         </div>
-
+</div>
+</div>
 

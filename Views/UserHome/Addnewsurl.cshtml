@@ -1,0 +1,78 @@
+@model TerminologyDemo.Models.ProjectUpload
+
+@{ 
+    ViewData["Title"] = "Share News";
+}
+
+
+
+<div class="form-horizontal">
+   <form class="form-horizontal" asp-controller="UserHome" asp-action="Addnewsurl"  method="post">
+        @if (ViewBag.Message != null)
+        {
+            <div class="form-control">
+                <div class="col-md-10">@ViewBag.Message</div>
+            </div>
+        }
+        <body>
+        <div class="form-group">
+            <label asp-for="Contributer" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Contributer" class="form-control"/>
+                <span asp-validation-for="Contributer" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ProjectTitle" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ProjectTitle" class="form-control" />
+                <span asp-validation-for="ProjectTitle" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="NewsTitle" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="NewsTitle" class="form-control" />
+                <span asp-validation-for="NewsTitle" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="urlName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="urlName" class="form-control" />
+                <span asp-validation-for="urlName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" onsubmit="message()" class="btn btn-default">Add</button>
+            </div>
+
+            <div class="col-md-offset-2 col-md-10">
+ 
+                <a class="nav-link text-dark" asp-area="" asp-controller="UserHome" asp-action="DeleteUrl">Delete</a>
+            </div>
+        </div>
+
+        <div>
+         <a class="nav-link text-dark" asp-area="" asp-controller="UserHome" asp-action="Logout">Logout</a>
+        </div>
+        
+        </body>
+        </form>
+    
+ 
+ </div>
+
+ @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+   
+    
+}
+
+  <script>
+                            function message()
+                            {
+                                alert ("News Added successfully");
+                            }
+                        </script>

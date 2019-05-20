@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TerminologyDemo.Models;
+using System.Collections.Generic;
 
 
 namespace TerminologyDemo.Controllers
@@ -17,8 +18,10 @@ namespace TerminologyDemo.Controllers
         }
          public IActionResult Index()
         {
-           // return View(_context.UserAccount.ToList());
-           return View();
+           return View(_context.ProjectUpload.ToList());
+        
+          // return View();
+
         } 
 
        
@@ -31,12 +34,14 @@ namespace TerminologyDemo.Controllers
         [HttpPost]
          public IActionResult Register(UserAccount user)
         {
+            
             if(ModelState.IsValid)
             {
                 _context.UserAccount.Add(user);
+                 user.IsActive = true;
                 _context.SaveChanges();
-                ModelState.Clear();
-                ViewBag.Message=user.firstName+" "+user.LastName+" Is successfully registered";
+                 ModelState.Clear();
+                 ViewBag.Message=user.firstName+" "+user.LastName+" Is successfully registered";
                 
             
             }
@@ -59,7 +64,7 @@ namespace TerminologyDemo.Controllers
             //var isValid = (user.UserName == "admin" && user.Password == "admin"); 
             if(user.UserName == "admin" && user.Password == "admin")
             {
-           // return RedirectToAction("AdminHome");
+           
            
 
          return RedirectToAction("ProjectManagementHome", "ProjectManagement");
@@ -70,15 +75,21 @@ namespace TerminologyDemo.Controllers
 
            
             var account= _context.UserAccount.FirstOrDefault (u => u.UserName == user.UserName && u.Password==user.Password);
-             //var account = _context.UserAccount.Where(u => u.UserName == user.UserName && u.Password == user.Password).FirstOrDefault();
+             
             
             if(account != null)
-            {
-               
+            {               
+                if(account.IsActive == false)
+                {
+                   ViewBag.Message("This user can't access this site");
+                }
+              else
+               { 
                HttpContext.Session.SetString ("UserId" , account.UserId.ToString() );
 
                  HttpContext.Session.SetString ("UserName" , account.UserName);
-                 return RedirectToAction("Welcome");
+                 return RedirectToAction("Welcome","UserHome");
+              }
             }
             else
             {
@@ -95,33 +106,12 @@ namespace TerminologyDemo.Controllers
             return View();
         }
 
-        
-
-
-       public IActionResult Welcome()
-        {
-            
-           // if(HttpContext.Session.GetString(UserAccount user)!=null)
-           if (HttpContext.Session.GetString("UserId") != null)
-            
-            {
-                ViewBag.UserName=HttpContext.Session.GetString("UserName");
-                return View();
-
-            }
-            else
-            {
-                return RedirectToAction("Login");
-            }
-            
-        }
-
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
             return RedirectToAction("index");
         }
-      public IActionResult AdminHome()
+      public IActionResult ProjectManagementHome()
         {
             return View(_context.UserAccount.ToList());
             
@@ -132,5 +122,8 @@ namespace TerminologyDemo.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+        
     }
 }

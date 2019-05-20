@@ -32,12 +32,13 @@ namespace TerminologyDemo
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-         
+        // Program.BuildWebHost();
 
 
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+        
             services.AddDistributedMemoryCache();
             services.AddSession();
             var connection="Server=ANJUMATHEW;Database=TerminologyDb;user=sa;password=Experion@123;";

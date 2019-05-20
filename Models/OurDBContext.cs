@@ -5,8 +5,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace TerminologyDemo.Models
 {
+
+   
+
 
     public class OurDBContext: DbContext
     {
@@ -20,6 +24,8 @@ namespace TerminologyDemo.Models
 
 
     public DbSet <UserAccount> UserAccount { get; set; }
-   public DbSet <ProjectManagementModel> ProjectManagement{ get ; set;}
+    public DbSet <TerminologyDemo.Models.ProjectManagement> ProjectManagement{ get ; set;}
+    public DbSet < ProjectUpload > ProjectUpload { get ; set;}
+   
     }
 }

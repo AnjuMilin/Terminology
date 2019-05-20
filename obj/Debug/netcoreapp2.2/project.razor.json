@@ -2764,6 +2764,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\ProjectManagement\\ProjectAdd.cshtml",
+      "TargetPath": "Views\\ProjectManagement\\ProjectAdd.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -2779,8 +2784,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\UserHome\\Welcome.cshtml",
+      "TargetPath": "Views\\UserHome\\Welcome.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\ProjectManagement\\ProjectDelete.cshtml",
+      "TargetPath": "Views\\ProjectManagement\\ProjectDelete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Shared\\_CookieConsentPartial.cshtml",
       "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\UserHome\\Addnewsurl.cshtml",
+      "TargetPath": "Views\\UserHome\\Addnewsurl.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\ProjectManagement\\ProjectView.cshtml",
+      "TargetPath": "Views\\ProjectManagement\\ProjectView.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -2814,13 +2839,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Home\\Welcome.cshtml",
-      "TargetPath": "Views\\Home\\Welcome.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views\\ProjectManagement\\ProjectAddView.cshtml",
-      "TargetPath": "Views\\ProjectManagement\\ProjectAddView.cshtml",
+      "FilePath": "Views\\UserHome\\DeleteUrl.cshtml",
+      "TargetPath": "Views\\UserHome\\DeleteUrl.cshtml",
       "FileKind": "mvc"
     },
     {

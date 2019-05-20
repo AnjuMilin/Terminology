@@ -1,0 +1,66 @@
+@model TerminologyDemo.Models.ProjectManagement
+@{
+    ViewData["Title"] = " Project Add";
+}
+
+<h2> @ViewBag.Username</h2>
+
+ <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            
+                            
+                            
+                        </li>
+
+
+
+
+
+
+
+
+
+  <!DOCTYPE html>
+<html>
+
+
+<h1>  Create New Projects  </h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ProjectAdd" onsubmit="message()">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ProjectName" class="control-label"></label>
+                <input asp-for="ProjectName" class="form-control" />
+                <span asp-validation-for="ProjectName" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ProjectManagementHome">Back to List</a>
+</div>
+</html>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+   
+    
+}
+<script>
+     function message()
+     {
+         alert("successfully created new project");
+     }
+</script>
+                    
+
+    

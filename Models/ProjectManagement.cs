@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TerminologyDemo.Models
 {
-  public class ProjectManagementModel
+  public class ProjectManagement
   {
       [Key]
 
@@ -15,6 +15,8 @@ namespace TerminologyDemo.Models
     
       [Required(ErrorMessage="Project Name  Required")]
       public string ProjectName { get; set; }
+
+     
         
   }
 

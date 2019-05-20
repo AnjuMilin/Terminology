@@ -1,0 +1,42 @@
+
+@model IEnumerable<TerminologyDemo.Models.ProjectManagement>
+@{
+    ViewData["Title"] = "Welcome To  admin Page";
+}
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Registered projects</h2>
+        @if (Model.Any())
+        {
+            <table class="table">
+                <tr>
+                    
+                    
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.ProjectName</td>
+                        
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <p>There are no projects in the list.</p>
+
+        }
+    </div>
+    </div>
+</div>
+
