@@ -33,7 +33,7 @@ namespace TerminologyDemo.Models
       
       
       [Compare( "Password" , ErrorMessage="Password  not match")]
-      [Required(ErrorMessage="ConformPassword Required")]
+     // [Required(ErrorMessage="ConformPassword Required")]
       public string ConformPassword { get; set; }
 
 

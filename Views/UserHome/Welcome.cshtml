@@ -3,15 +3,16 @@
     ViewData["Title"] = "Welcome";
 }
 
-<h2>Hello @ViewBag.Username</h2>
+<h2>Hello @ViewBag.UserName</h2>
 
  <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             
                             <a class="nav-link text-dark" asp-area="" asp-controller="UserHome" asp-action="AddnewsUrl">Add News Url</a>
-
-                            <a class="nav-link text-dark" asp-area="" asp-controller="UserHome" asp-action="EditProfile">Edit Profile</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="UserHome" asp-route-UserId="@ViewBag.UserId"asp-action="DeleteUrl">Delete News Url</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="UserHome" asp-action="AddNewTerminology">Add New Terminology</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="UserHome" asp-route-UserId="@ViewBag.UserId" asp-action="EditProfile">Edit Profile  and Change password</a>
                             <a class="nav-link text-dark" asp-area="" asp-controller="UserHome" asp-action="Logout">Logout</a>
 
                             

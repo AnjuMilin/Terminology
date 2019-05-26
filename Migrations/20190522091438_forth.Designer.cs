@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TerminologyDemo.Models;
 
 namespace TerminologyDemo.Migrations
 {
     [DbContext(typeof(OurDBContext))]
-    partial class OurDBContextModelSnapshot : ModelSnapshot
+    [Migration("20190522091438_forth")]
+    partial class forth
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,7 +29,11 @@ namespace TerminologyDemo.Migrations
                     b.Property<string>("ProjectName")
                         .IsRequired();
 
+                    b.Property<int>("UserId");
+
                     b.HasKey("ProjectId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("ProjectManagement");
                 });
@@ -45,14 +51,10 @@ namespace TerminologyDemo.Migrations
 
                     b.Property<string>("ProjectTitle");
 
-                    b.Property<int>("UserId");
-
                     b.Property<string>("urlName")
                         .IsRequired();
 
                     b.HasKey("PId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("ProjectUpload");
                 });
@@ -87,7 +89,7 @@ namespace TerminologyDemo.Migrations
                     b.ToTable("UserAccount");
                 });
 
-            modelBuilder.Entity("TerminologyDemo.Models.ProjectUpload", b =>
+            modelBuilder.Entity("TerminologyDemo.Models.ProjectManagement", b =>
                 {
                     b.HasOne("TerminologyDemo.Models.UserAccount", "UserAccount")
                         .WithMany()

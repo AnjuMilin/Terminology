@@ -48,14 +48,12 @@
                 <button type="submit" onsubmit="message()" class="btn btn-default">Add</button>
             </div>
 
-            <div class="col-md-offset-2 col-md-10">
- 
-                <a class="nav-link text-dark" asp-area="" asp-controller="UserHome" asp-action="DeleteUrl">Delete</a>
-            </div>
+            
         </div>
 
         <div>
          <a class="nav-link text-dark" asp-area="" asp-controller="UserHome" asp-action="Logout">Logout</a>
+         <a asp-action="Welcome">Back to List</a>
         </div>
         
         </body>
@@ -63,6 +61,7 @@
     
  
  </div>
+ 
 
  @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

@@ -79,17 +79,17 @@ namespace TerminologyDemo.Controllers
             
             if(account != null)
             {               
-                if(account.IsActive == false)
-                {
-                   ViewBag.Message("This user can't access this site");
-                }
-              else
-               { 
+                //if(account.IsActive == false)
+                //{
+                 //  ViewBag.Message("This user can't access this site");
+               // }
+              //else
+               //{ 
                HttpContext.Session.SetString ("UserId" , account.UserId.ToString() );
 
                  HttpContext.Session.SetString ("UserName" , account.UserName);
                  return RedirectToAction("Welcome","UserHome");
-              }
+              //}
             }
             else
             {
@@ -100,11 +100,7 @@ namespace TerminologyDemo.Controllers
         }
 
         
-       public IActionResult ResetPassword()
-        {
-           
-            return View();
-        }
+      
 
         public IActionResult Logout()
         {

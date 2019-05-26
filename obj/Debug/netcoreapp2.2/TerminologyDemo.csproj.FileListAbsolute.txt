@@ -38,3 +38,5 @@ C:\Users\anju.mathew\TerminologyDemo\obj\Debug\netcoreapp2.2\Razor\Views\Project
 C:\Users\anju.mathew\TerminologyDemo\obj\Debug\netcoreapp2.2\Razor\Views\UserHome\Addnewsurl.g.cshtml.cs
 C:\Users\anju.mathew\TerminologyDemo\obj\Debug\netcoreapp2.2\Razor\Views\UserHome\Welcome.g.cshtml.cs
 C:\Users\anju.mathew\TerminologyDemo\obj\Debug\netcoreapp2.2\Razor\Views\UserHome\DeleteUrl.g.cshtml.cs
+C:\Users\anju.mathew\TerminologyDemo\obj\Debug\netcoreapp2.2\Razor\Views\UserHome\EditProfile.g.cshtml.cs
+C:\Users\anju.mathew\TerminologyDemo\obj\Debug\netcoreapp2.2\Razor\Views\UserHome\AddNewTerminology.g.cshtml.cs

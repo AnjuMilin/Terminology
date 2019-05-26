@@ -1,7 +1,14 @@
+
 @model IEnumerable<TerminologyDemo.Models.ProjectUpload>
 
 @{
     ViewData["Title"] = "Delete news";
+
+   //{
+       // List<SelectListItem> dropdownlistproject = (List<SelectListItem>)@ViewBag.DropdownList;
+        //List<SelectListItem> CategorySelectList = CategoryList.Select(x => new SelectListItem() { Text = x.CategoryName.Trim(), Value = x.CategoryID.Trim() });
+   // }
+
 }
 
 <h1>Delete</h1>
@@ -14,7 +21,9 @@
 
         
         
-    <form asp-action="DeleteUrl">
+    
+
+ <form asp-action="DeleteUrl">
        
      <dl class="row">
         <dt class = "col-sm-2">
@@ -23,13 +32,17 @@
                         new SelectList(
                         Model.Select(x => new { Value = x.PId, Text = x.NewsTitle}),
                          "Value",
-                          "Text"
-    )
-) 
+                          "Text")
+         )
+
+
+
 <!-- <input id="ProjectId" type="text" /> -->
         </dt></dl>
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="ProjectUpload" onsubmit="message()">Back to List</a>
+
+
+        <input type="submit" value="DeleteUrl" class="btn btn-danger" /> |
+        <a asp-action="Welcome" onsubmit="message()">Back to List</a>
     </form>
 </div>
 </html>
